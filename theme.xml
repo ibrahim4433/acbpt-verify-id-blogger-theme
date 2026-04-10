@@ -409,7 +409,7 @@
 
     <section class='hero' id='verify-certificate'>
       <div class='container hero-inner'>
-        <h1>STUDENT&#39;S CERTIFICATE</h1>
+        <h1>STUDENT CERTIFICATE</h1>
         <p>Enter your certificate ID to instantly verify and view official certificate details.</p>
         <div class='search-wrap'>
           <div class='search-card'>
@@ -471,7 +471,7 @@
           <h3 class='footer-title'>Quick Links</h3>
           <nav aria-label='Footer Links' class='footer-links'>
             <a href='/'>Home</a>
-            <a href='/'>Verify Certificate</a>
+            <a href='#verify-certificate'>Verify Certificate</a>
             <a href='/p/contact.html'>Contact Us</a>
           </nav>
         </div>
