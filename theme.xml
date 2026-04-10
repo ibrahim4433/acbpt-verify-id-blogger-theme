@@ -261,7 +261,7 @@
       <div class='container'>
         <div class='search-card'>
           <form action='/search' class='search-form' method='get'>
-            <input name='q' placeholder='Enter Student ID / أدخل رقم الطالب' type='text'/>
+            <input name='q' placeholder='Enter Student ID / أدخل رقم الطالب' required='required' type='text'/>
             <button type='submit'><i class='fa-solid fa-magnifying-glass'></i> Verify</button>
           </form>
         </div>
@@ -297,7 +297,8 @@
               </div>
             </article>
           </b:includable>
-        </b:widget></b:section>
+          </b:widget>
+        </b:section>
       </div>
     </main>
 
