@@ -409,13 +409,13 @@
 
     <section class='hero' id='verify-certificate'>
       <div class='container hero-inner'>
-        <h1>STUDENT CERTIFICATE</h1>
+        <h1>STUDENT CERTIFICATE VERIFICATION</h1>
         <p>Enter your certificate ID to instantly verify and view official certificate details.</p>
         <div class='search-wrap'>
           <div class='search-card'>
             <form action='/search' class='search-form' method='get'>
               <input name='q' placeholder='Enter Your Student ID / أدخل رقم الطالب' required='required' type='text'/>
-              <button type='submit'><i class='fa-solid fa-magnifying-glass'></i> Verify Certificate</button>
+              <button type='submit'><i class='fa-solid fa-magnifying-glass'></i> Verify</button>
             </form>
           </div>
         </div>
