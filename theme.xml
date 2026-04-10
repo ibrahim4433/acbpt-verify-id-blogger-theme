@@ -11,17 +11,19 @@
          Palette: Navy / White / Red
          Font: Tajawal
       ========================================= */
-      @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
       :root {
-        --navy: #0b1e4f;
-        --navy-soft: #142a66;
+        --navy: #161c37;
+        --navy-soft: #1d2850;
         --white: #ffffff;
         --red: #c1121f;
-        --gray-100: #f7f8fb;
-        --gray-300: #dfe3ef;
+        --red-soft: #df1f2c;
+        --gray-100: #f4f6fb;
+        --gray-200: #e9edf7;
+        --gray-300: #d6deef;
         --gray-600: #4b556b;
-        --shadow: 0 10px 30px rgba(11, 30, 79, 0.08);
+        --shadow: 0 14px 34px rgba(22, 28, 55, 0.12);
         --radius: 14px;
       }
 
@@ -37,8 +39,8 @@
       }
 
       body {
-        font-family: 'Tajawal', Arial, sans-serif;
-        background: var(--gray-100);
+        font-family: 'Roboto', Arial, sans-serif;
+        background: linear-gradient(180deg, #f7f9ff 0%, var(--gray-100) 100%);
         color: var(--navy);
         line-height: 1.5;
       }
@@ -56,8 +58,14 @@
 
       .site-header {
         background: var(--white);
-        border-bottom: 1px solid var(--gray-300);
-        padding: 20px 16px;
+        border-top: 4px solid var(--red);
+        border-bottom: 1px solid var(--gray-200);
+        padding: 18px 16px 16px;
+      }
+
+      .header-section {
+        margin: 0 auto;
+        width: 100%;
       }
 
       .logo-wrap {
@@ -65,10 +73,24 @@
         justify-content: center;
       }
 
-      .logo-wrap img {
-        width: 180px;
-        max-width: 70%;
+      .logo-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .site-logo {
+        width: 130px;
+        max-width: 100%;
         height: auto;
+        border-radius: 12px;
+      }
+
+      .logo-text {
+        font-size: 1.6rem;
+        font-weight: 900;
+        letter-spacing: 0.03em;
+        color: var(--navy);
       }
 
       .site-main {
@@ -81,19 +103,20 @@
 
       .card {
         width: 100%;
-        max-width: 640px;
+        max-width: 680px;
         background: var(--white);
         border: 1px solid var(--gray-300);
+        border-top: 4px solid var(--red);
         border-radius: var(--radius);
         box-shadow: var(--shadow);
-        padding: 24px 18px;
+        padding: 26px 18px;
       }
 
       .verify-title {
         text-align: center;
-        margin: 0 0 16px;
+        margin: 0 0 14px;
         font-size: 1.35rem;
-        font-weight: 800;
+        font-weight: 900;
         color: var(--navy);
       }
 
@@ -114,7 +137,7 @@
         width: 100%;
         border: 1px solid var(--gray-300);
         border-radius: 10px;
-        background: var(--white);
+        background: #fbfcff;
         min-height: 48px;
         padding: 0 14px;
         font-size: 1rem;
@@ -143,7 +166,7 @@
       }
 
       .btn-primary {
-        background: var(--navy);
+        background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
         color: var(--white);
       }
 
@@ -152,7 +175,7 @@
       }
 
       .btn-back {
-        background: var(--red);
+        background: linear-gradient(135deg, var(--red) 0%, var(--red-soft) 100%);
         color: var(--white);
         margin-top: 16px;
       }
@@ -195,7 +218,7 @@
       }
 
       .site-footer {
-        background: var(--navy);
+        background: linear-gradient(135deg, var(--navy) 0%, #11172f 100%);
         color: var(--white);
         text-align: center;
         padding: 18px 14px 20px;
@@ -219,9 +242,15 @@
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.12);
         border: 1px solid rgba(255, 255, 255, 0.28);
+        transition: 0.2s ease;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+      }
+
+      .social-link:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.22);
       }
 
       .social-link svg {
@@ -256,11 +285,30 @@
   <body>
     <div class='app-shell'>
       <header class='site-header'>
-        <div class='logo-wrap'>
-          <a expr:href='data:blog.homepageUrl'>
-            <img alt='ACBPT Logo' src='https://via.placeholder.com/280x80?text=ACBPT+LOGO'/>
-          </a>
-        </div>
+        <b:section class='header-section' id='header' maxwidgets='1' showaddelement='no'>
+          <b:widget id='Header1' locked='false' title='ACBPT Logo' type='Header' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='displayUrl'>https://github.com/user-attachments/assets/3d06a1ee-c3c2-4205-8b42-3e7923c60c07</b:widget-setting>
+              <b:widget-setting name='displayHeight'>119</b:widget-setting>
+              <b:widget-setting name='sectionWidth'>960</b:widget-setting>
+              <b:widget-setting name='useImage'>true</b:widget-setting>
+              <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
+              <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
+              <b:widget-setting name='displayWidth'>120</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+              <div class='logo-wrap'>
+                <a class='logo-link' expr:href='data:blog.homepageUrl'>
+                  <b:if cond='data:useImage'>
+                    <img class='site-logo' expr:alt='data:blog.title' expr:src='data:displayUrl'/>
+                    <b:else/>
+                    <span class='logo-text'><data:blog.title/></span>
+                  </b:if>
+                </a>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
       </header>
 
       <main class='site-main'>
