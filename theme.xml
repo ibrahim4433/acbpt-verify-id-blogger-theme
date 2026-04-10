@@ -400,14 +400,14 @@
         </div>
         <nav aria-label='Primary' class='primary-nav'>
           <a href='/'>Home</a>
-          <a href='/'>Verify Certificate</a>
+          <a href='#verify-certificate'>Verify Certificate</a>
           <a href='/p/contact.html'>Contact Us</a>
           <a class='login-link' href='/p/login.html'><i class='fa-solid fa-user'></i> User Login</a>
         </nav>
       </div>
     </header>
 
-    <section class='hero'>
+    <section class='hero' id='verify-certificate'>
       <div class='container hero-inner'>
         <h1>STUDENT&#39;S CERTIFICATE</h1>
         <p>Enter your certificate ID to instantly verify and view official certificate details.</p>
@@ -415,7 +415,7 @@
           <div class='search-card'>
             <form action='/search' class='search-form' method='get'>
               <input name='q' placeholder='Enter Your Student ID / أدخل رقم الطالب' required='required' type='text'/>
-              <button type='submit'><i class='fa-solid fa-magnifying-glass'></i> Find My Certificate</button>
+              <button type='submit'><i class='fa-solid fa-magnifying-glass'></i> Verify Certificate</button>
             </form>
           </div>
         </div>
