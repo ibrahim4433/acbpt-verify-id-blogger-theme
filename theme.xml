@@ -312,7 +312,7 @@
             <a aria-label='YouTube' href='https://youtube.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'></i></a>
           </div>
         </div>
-        <div class='footer-right'>Contact: info@acbpt.com</div>
+        <div class='footer-right'><a href='mailto:info@acbpt.com'>Contact: info@acbpt.com</a></div>
       </div>
     </footer>
   </body>
