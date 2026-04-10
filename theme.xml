@@ -286,7 +286,7 @@
     <div class='app-shell'>
       <header class='site-header'>
         <b:section class='header-section' id='header' maxwidgets='1' showaddelement='no'>
-          <b:widget id='Header1' locked='false' title='ACBPT Logo' type='Header' version='2' visible='true'>
+          <b:widget id='Header1' locked='false' title='AmericancanadianBoard Logo' type='Header' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='displayUrl'>https://github.com/user-attachments/assets/3d06a1ee-c3c2-4205-8b42-3e7923c60c07</b:widget-setting>
               <b:widget-setting name='displayHeight'>119</b:widget-setting>
@@ -295,15 +295,17 @@
               <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
               <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
               <b:widget-setting name='displayWidth'>120</b:widget-setting>
+              <b:widget-setting name='title'>AmericancanadianBoard</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main'>
               <div class='logo-wrap'>
                 <a class='logo-link' expr:href='data:blog.homepageUrl'>
-                  <b:if cond='data:useImage'>
+                  <b:if cond='data:displayUrl'>
                     <img class='site-logo' expr:alt='data:blog.title' expr:src='data:displayUrl'/>
                     <b:else/>
-                    <span class='logo-text'><data:blog.title/></span>
+                    <img alt='AmericancanadianBoard Logo' class='site-logo' src='https://github.com/user-attachments/assets/3d06a1ee-c3c2-4205-8b42-3e7923c60c07'/>
                   </b:if>
+                  <span class='logo-text'>AmericancanadianBoard</span>
                 </a>
               </div>
             </b:includable>
@@ -350,7 +352,7 @@
       </main>
 
       <footer class='site-footer'>
-        <p class='footer-copy'>© <data:blog.title/>. All rights reserved.</p>
+        <p class='footer-copy'>© AmericancanadianBoard. All rights reserved.</p>
         <div class='footer-socials'>
           <a aria-label='Facebook' class='social-link' href='https://facebook.com' rel='noopener noreferrer' target='_blank'>
             <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.2 0-1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8v3h2.6v7h2.9z'/></svg>
