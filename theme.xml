@@ -85,6 +85,7 @@
         background: var(--nav-dark);
         color: #ffffff;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        position: relative;
       }
 
       .nav-bar {
@@ -146,12 +147,106 @@
         background: rgba(255, 255, 255, 0.12);
       }
 
-      .primary-nav .login-link {
+      .primary-nav .contact-btn {
         background: var(--primary);
         text-transform: none;
+        border-radius: 8px;
+        padding: 10px 16px;
       }
 
-      .primary-nav .login-link:hover {
+      .primary-nav .contact-btn:hover {
+        background: var(--primary-hover);
+      }
+
+      .lang-toggle {
+        background: transparent;
+        border: 1.5px solid rgba(255, 255, 255, 0.5);
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-family: inherit;
+        font-size: 0.88rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .lang-toggle:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .hamburger {
+        display: none;
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+
+      .hamburger:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-dark);
+        z-index: 200;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 4px 0 8px;
+      }
+
+      .mobile-menu.open {
+        display: flex;
+      }
+
+      .mobile-menu .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mobile-menu a {
+        color: #ffffff;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .mobile-menu a:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        padding: 10px 24px;
+        background: var(--primary);
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 0.96rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+      }
+
+      .download-btn:hover {
         background: var(--primary-hover);
       }
 
@@ -345,12 +440,6 @@
       }
 
       @media (max-width: 980px) {
-        .nav-bar {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 16px 0;
-        }
-
         .primary-nav {
           justify-content: flex-start;
         }
@@ -366,6 +455,31 @@
           flex-direction: column;
           align-items: flex-start;
           padding: 8px 0;
+        }
+
+        .nav-bar {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          min-height: 60px;
+          padding: 10px 0;
+        }
+
+        #header img {
+          max-width: 130px;
+        }
+
+        .primary-nav {
+          display: none;
+        }
+
+        .lang-toggle {
+          font-size: 0.8rem;
+          padding: 5px 10px;
+        }
+
+        .hamburger {
+          display: flex;
         }
 
         .search-form {
@@ -386,10 +500,11 @@
           <a aria-label='Call us at +49 163 9062444' href='tel:+491639062444'><i class='fa-solid fa-phone'></i> +49 163 9062444</a>
         </div>
         <div class='top-social'>
-          <a aria-label='Facebook' href='https://facebook.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-facebook-f'></i></a>
-          <a aria-label='Twitter' href='https://twitter.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-x-twitter'></i></a>
-          <a aria-label='Instagram' href='https://instagram.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-instagram'></i></a>
-          <a aria-label='LinkedIn' href='https://linkedin.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-linkedin-in'></i></a>
+          <a aria-label='YouTube' href='https://youtube.com/@acbptmembers1534' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'></i></a>
+          <a aria-label='WhatsApp' href='https://wa.me/6289509909354' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'></i></a>
+          <a aria-label='Facebook' href='#'><i class='fa-brands fa-facebook-f'></i></a>
+          <a aria-label='Telegram' href='#'><i class='fa-brands fa-telegram'></i></a>
+          <a aria-label='Email' href='mailto:info@acbpt.com'><i class='fa-solid fa-envelope'></i></a>
         </div>
       </div>
     </div>
@@ -401,14 +516,21 @@
         </div>
         <nav aria-label='Primary' class='primary-nav'>
           <a href='/'>Home</a>
-          <a href='#verify-certificate'>Verify Certificate</a>
-          <a href='/p/contact.html'>Contact Us</a>
-          <a class='login-link' href='/p/login.html'><i class='fa-solid fa-user'></i> User Login</a>
+          <a data-i18n='verifyLink' href='#verify-section'>Verify Certificate</a>
+          <a class='contact-btn' data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
         </nav>
+        <button class='lang-toggle' id='lang-toggle' onclick='toggleLang()' title='Switch Language'>AR</button>
+        <button aria-label='Toggle menu' class='hamburger' id='hamburger-btn' onclick='toggleMenu()'><i class='fa-solid fa-bars'></i></button>
+      </div>
+      <div class='mobile-menu' id='mobile-menu'>
+        <div class='container'>
+          <a data-i18n='verifyLink' href='#verify-section'>Verify Certificate</a>
+          <a data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
+        </div>
       </div>
     </header>
 
-    <section class='hero' id='verify-certificate'>
+    <section class='hero' id='verify-section'>
       <div class='container hero-inner'>
         <h1>Student Certificate Verification</h1>
         <p>Enter your certificate ID to instantly verify and view official certificate details.</p>
@@ -450,6 +572,9 @@
               <div class='result-body'>
                 <data:post.body/>
               </div>
+              <div style='text-align:center;margin-top:12px;'>
+                <button class='download-btn' onclick='downloadCert(this)'><i class='fa-solid fa-download'></i> <span data-i18n='downloadBtn'>Download Certificate</span></button>
+              </div>
             </article>
           </b:includable>
           </b:widget>
@@ -457,23 +582,25 @@
       </div>
     </main>
 
-    <footer class='site-footer'>
+    <footer class='site-footer' id='contact-section'>
       <div class='container footer-inner'>
         <div>
           <div class='footer-brand'>© <data:blog.title/></div>
           <div class='footer-meta'>All Rights Reserved.</div>
           <div class='social-links'>
-            <a aria-label='Facebook' href='https://facebook.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-facebook-f'></i></a>
-            <a aria-label='LinkedIn' href='https://linkedin.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-linkedin-in'></i></a>
-            <a aria-label='YouTube' href='https://youtube.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'></i></a>
+            <a aria-label='YouTube' href='https://youtube.com/@acbptmembers1534' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'></i></a>
+            <a aria-label='WhatsApp' href='https://wa.me/6289509909354' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'></i></a>
+            <a aria-label='Facebook' href='#'><i class='fa-brands fa-facebook-f'></i></a>
+            <a aria-label='Telegram' href='#'><i class='fa-brands fa-telegram'></i></a>
+            <a aria-label='Email' href='mailto:info@acbpt.com'><i class='fa-solid fa-envelope'></i></a>
           </div>
         </div>
         <div>
           <h3 class='footer-title'>Quick Links</h3>
           <nav aria-label='Footer Links' class='footer-links'>
             <a href='/'>Home</a>
-            <a href='#verify-certificate'>Verify Certificate</a>
-            <a href='/p/contact.html'>Contact Us</a>
+            <a data-i18n='verifyLink' href='#verify-section'>Verify Certificate</a>
+            <a data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
           </nav>
         </div>
         <div>
@@ -485,5 +612,81 @@
         </div>
       </div>
     </footer>
+    <script type='text/javascript'>
+    //<![CDATA[
+      // ── Hamburger / mobile menu ──
+      function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('open');
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('#mobile-menu a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.remove('open');
+          });
+        });
+      });
+
+      // ── Download certificate ──
+      function downloadCert(btn) {
+        const card = btn.closest('.result-card');
+        const img = card ? card.querySelector('.result-body img') : null;
+        if (!img) {
+          alert(currentLang === 'ar' ? '\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629.' : 'No certificate image found.');
+          return;
+        }
+        const titleEl = card.querySelector('.result-title');
+        const filename = (titleEl ? titleEl.textContent.trim().replace(/\s+/g, '_') : 'certificate') + '.jpg';
+        const a = document.createElement('a');
+        a.href = img.src;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+
+      // ── Language toggle EN / AR ──
+      var langTexts = {
+        en: {
+          verifyLink: 'Verify Certificate',
+          contactBtn: 'Contact Us',
+          heroTitle: 'Student Certificate Verification',
+          heroDesc: 'Enter your certificate ID to instantly verify and view official certificate details.',
+          searchPlaceholder: 'Enter Your Student ID',
+          verifyBtnText: 'Verify',
+          downloadBtn: 'Download Certificate',
+          langLabel: 'AR'
+        },
+        ar: {
+          verifyLink: '\u0627\u0644\u062a\u062d\u0642\u0642 \u0645\u0646 \u0627\u0644\u0634\u0647\u0627\u062f\u0629',
+          contactBtn: '\u0627\u062a\u0635\u0644 \u0628\u0646\u0627',
+          heroTitle: '\u0627\u0644\u062a\u062d\u0642\u0642 \u0645\u0646 \u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u0637\u0627\u0644\u0628',
+          heroDesc: '\u0623\u062f\u062e\u0644 \u0631\u0642\u0645 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0644\u0644\u062a\u062d\u0642\u0642 \u0627\u0644\u0641\u0648\u0631\u064a \u0648\u0639\u0631\u0636 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u0631\u0633\u0645\u064a\u0629.',
+          searchPlaceholder: '\u0623\u062f\u062e\u0644 \u0631\u0642\u0645 \u0627\u0644\u0637\u0627\u0644\u0628',
+          verifyBtnText: '\u062a\u062d\u0642\u0642',
+          downloadBtn: '\u062a\u062d\u0645\u064a\u0644 \u0627\u0644\u0634\u0647\u0627\u062f\u0629',
+          langLabel: 'EN'
+        }
+      };
+      let currentLang = 'en';
+
+      function toggleLang() {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        var t = langTexts[currentLang];
+        document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+        document.getElementById('lang-toggle').textContent = t.langLabel;
+        document.querySelectorAll('[data-i18n="verifyLink"]').forEach(function (el) { el.textContent = t.verifyLink; });
+        document.querySelectorAll('[data-i18n="contactBtn"]').forEach(function (el) { el.textContent = t.contactBtn; });
+        var heroTitle = document.querySelector('.hero h1');
+        if (heroTitle) heroTitle.textContent = t.heroTitle;
+        var heroDesc = document.querySelector('.hero p');
+        if (heroDesc) heroDesc.textContent = t.heroDesc;
+        var searchInput = document.querySelector('.search-form input[name="q"]');
+        if (searchInput) searchInput.setAttribute('placeholder', t.searchPlaceholder);
+        var verifyBtn = document.querySelector('.search-form button');
+        if (verifyBtn) verifyBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> ' + t.verifyBtnText;
+        document.querySelectorAll('[data-i18n="downloadBtn"]').forEach(function (el) { el.textContent = t.downloadBtn; });
+      }
+    //]]>
+    </script>
   </body>
 </html>
