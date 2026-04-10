@@ -310,7 +310,7 @@
               <b:if cond='data:view.isSearch'>
                 <b:if cond='data:posts.empty'>
                   <div class='result-card'>
-                    <p class='not-found'>No certificate found for this ID / لا توجد شهادة لهذا الرقم</p>
+                    <p class='not-found'>No record found for this Student ID / لا يوجد سجل لهذا الرقم</p>
                   </div>
                   <b:else/>
                   <b:loop values='data:posts' var='post'>
