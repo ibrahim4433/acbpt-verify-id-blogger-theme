@@ -287,24 +287,10 @@
       <header class='site-header'>
         <b:section class='header-section' id='header' maxwidgets='1' showaddelement='no'>
           <b:widget id='Header1' locked='false' title='AmericancanadianBoard Logo' type='Header' version='2' visible='true'>
-            <b:widget-settings>
-              <b:widget-setting name='displayUrl'>https://github.com/user-attachments/assets/3d06a1ee-c3c2-4205-8b42-3e7923c60c07</b:widget-setting>
-              <b:widget-setting name='displayHeight'>119</b:widget-setting>
-              <b:widget-setting name='sectionWidth'>960</b:widget-setting>
-              <b:widget-setting name='useImage'>true</b:widget-setting>
-              <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
-              <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-              <b:widget-setting name='displayWidth'>120</b:widget-setting>
-              <b:widget-setting name='title'>AmericancanadianBoard</b:widget-setting>
-            </b:widget-settings>
             <b:includable id='main'>
               <div class='logo-wrap'>
                 <a class='logo-link' expr:href='data:blog.homepageUrl'>
-                  <b:if cond='data:displayUrl'>
-                    <img class='site-logo' expr:alt='data:blog.title' expr:src='data:displayUrl'/>
-                    <b:else/>
-                    <img alt='AmericancanadianBoard Logo' class='site-logo' src='https://github.com/user-attachments/assets/3d06a1ee-c3c2-4205-8b42-3e7923c60c07'/>
-                  </b:if>
+                  <img alt='AmericancanadianBoard Logo' class='site-logo' src='https://github.com/user-attachments/assets/3d06a1ee-c3c2-4205-8b42-3e7923c60c07'/>
                   <span class='logo-text'>AmericancanadianBoard</span>
                 </a>
               </div>
