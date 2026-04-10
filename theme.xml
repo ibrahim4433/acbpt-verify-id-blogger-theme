@@ -69,7 +69,7 @@
         gap: 18px;
       }
 
-      .top-contact span,
+      .top-contact a,
       .top-social a {
         display: inline-flex;
         align-items: center;
@@ -183,6 +183,7 @@
         font-size: clamp(1.8rem, 3.4vw, 2.9rem);
         font-weight: 800;
         letter-spacing: 0.02em;
+        text-transform: uppercase;
       }
 
       .hero p {
@@ -381,8 +382,8 @@
     <div class='top-strip'>
       <div class='container top-strip-inner'>
         <div class='top-contact'>
-          <span><i class='fa-solid fa-envelope'></i> info@acbpt.com</span>
-          <span><i class='fa-solid fa-phone'></i> +49 163 9062444</span>
+          <a href='mailto:info@acbpt.com'><i class='fa-solid fa-envelope'></i> info@acbpt.com</a>
+          <a href='tel:+491639062444'><i class='fa-solid fa-phone'></i> +49 163 9062444</a>
         </div>
         <div class='top-social'>
           <a aria-label='Facebook' href='https://facebook.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-facebook-f'></i></a>
@@ -409,7 +410,7 @@
 
     <section class='hero' id='verify-certificate'>
       <div class='container hero-inner'>
-        <h1>STUDENT CERTIFICATE VERIFICATION</h1>
+        <h1>Student Certificate Verification</h1>
         <p>Enter your certificate ID to instantly verify and view official certificate details.</p>
         <div class='search-wrap'>
           <div class='search-card'>
