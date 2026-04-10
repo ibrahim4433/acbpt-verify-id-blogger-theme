@@ -9,10 +9,11 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'/>
     <b:skin><![CDATA[
       :root {
-        --primary: #0f2a4a;
-        --secondary: #c1121f;
-        --bg: #f4f7f6;
-        --text: #1e293b;
+        --navy: #0f2a4a;
+        --red: #c1121f;
+        --white: #ffffff;
+        --bg: #f4f7fb;
+        --text: #1f2937;
       }
 
       * {
@@ -27,94 +28,86 @@
 
       body {
         font-family: 'Cairo', Arial, sans-serif;
-        color: var(--text);
         background: var(--bg);
+        color: var(--text);
         line-height: 1.6;
       }
 
       a {
-        color: inherit;
         text-decoration: none;
+        color: inherit;
       }
 
       .container {
-        width: min(1100px, 92%);
+        width: min(1120px, 92%);
         margin: 0 auto;
       }
 
       .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background: var(--white);
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
       }
 
       .header-inner {
-        min-height: 90px;
+        min-height: 94px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px 0;
+        padding: 10px 0;
       }
 
-      .header-widget {
+      #header {
         width: 100%;
       }
 
-      .header-widget .widget-content {
-        display: flex;
-        justify-content: center;
+      #header .widget,
+      #header .widget-content {
+        text-align: center;
       }
 
-      .header-logo-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 50px;
-      }
-
-      .header-logo-link img {
-        max-width: 260px;
+      #header img {
+        max-width: 280px;
         width: auto;
         height: auto;
       }
 
-      .header-title {
+      #header h1,
+      #header h2,
+      #header .title {
         margin: 0;
-        font-size: 1.3rem;
+        color: var(--navy);
+        font-size: 1.5rem;
         font-weight: 800;
-        color: var(--primary);
       }
 
       .hero {
-        background: var(--primary);
-        color: #fff;
+        background: linear-gradient(120deg, #0b1f37 0%, #12335a 100%);
+        color: var(--white);
         text-align: center;
-        padding: 80px 0;
+        padding: 84px 0 92px;
       }
 
       .hero h1 {
         margin: 0;
-        font-size: clamp(1.7rem, 3.1vw, 2.5rem);
+        font-size: clamp(1.75rem, 3.1vw, 2.6rem);
         font-weight: 800;
       }
 
       .hero p {
-        margin: 16px auto 0;
-        max-width: 760px;
-        font-size: 1.03rem;
+        margin: 15px auto 0;
+        max-width: 780px;
         opacity: 0.95;
+        font-size: 1.02rem;
       }
 
       .search-wrap {
-        margin-top: -50px;
+        margin-top: -46px;
       }
 
       .search-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        background: var(--white);
+        border-radius: 14px;
+        box-shadow: 0 12px 32px rgba(15, 42, 74, 0.16);
         padding: 24px;
       }
 
@@ -123,20 +116,21 @@
         gap: 12px;
       }
 
-      .search-form input[type='text'] {
+      .search-form input[name='q'] {
         flex: 1;
         min-height: 56px;
-        border: 1px solid #d7dde5;
+        border: 1px solid #d7dee7;
         border-radius: 10px;
         padding: 0 16px;
         font-size: 1rem;
+        font-family: inherit;
         outline: none;
         transition: border-color 0.2s ease, box-shadow 0.2s ease;
       }
 
-      .search-form input[type='text']:focus {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(15, 42, 74, 0.15);
+      .search-form input[name='q']:focus {
+        border-color: var(--navy);
+        box-shadow: 0 0 0 3px rgba(15, 42, 74, 0.14);
       }
 
       .search-form button {
@@ -144,39 +138,36 @@
         border: 0;
         border-radius: 10px;
         padding: 0 24px;
-        background: var(--secondary);
-        color: #fff;
+        font-family: inherit;
         font-size: 1rem;
         font-weight: 700;
+        color: var(--white);
+        background: var(--red);
         cursor: pointer;
-        transition: background 0.2s ease;
-      }
-
-      .search-form button:hover {
-        background: #9d0d18;
       }
 
       .content-section {
-        padding: 40px 0 70px;
+        padding: 42px 0 74px;
       }
 
+      .empty-state,
       .result-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+        background: var(--white);
+        border-radius: 14px;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
         padding: 24px;
       }
 
       .result-card + .result-card {
-        margin-top: 16px;
+        margin-top: 18px;
       }
 
       .result-title {
         margin: 0 0 14px;
-        color: var(--primary);
-        font-size: 1.35rem;
-        font-weight: 800;
         text-align: center;
+        color: var(--navy);
+        font-size: 1.4rem;
+        font-weight: 800;
         word-break: break-word;
       }
 
@@ -186,63 +177,53 @@
 
       .result-body img {
         max-width: 100%;
-        border: 1px solid #ddd;
-        border-radius: 8px;
         height: auto;
-      }
-
-      .empty-text {
-        margin: 0;
-        text-align: center;
-        color: #6b7280;
-        font-size: 1rem;
+        border-radius: 10px;
+        border: 1px solid #d9dee6;
       }
 
       .not-found {
         margin: 0;
         text-align: center;
-        color: var(--secondary);
+        color: var(--red);
+        font-size: 1.05rem;
         font-weight: 700;
       }
 
+      .hint {
+        margin: 0;
+        text-align: center;
+        color: #64748b;
+      }
+
       .site-footer {
-        background: #111;
-        color: #d3d6dc;
+        background: #0d1422;
+        color: #d7dde7;
         padding: 18px 0;
       }
 
-      .footer-grid {
+      .footer-inner {
         display: grid;
-        gap: 16px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: center;
+        gap: 14px;
       }
 
-      .footer-col {
-        font-size: 0.93rem;
-      }
-
-      .footer-col.center {
+      .footer-center {
         text-align: center;
       }
 
-      .footer-col.right {
+      .footer-right {
         text-align: right;
       }
 
       .social-links {
         display: inline-flex;
-        gap: 10px;
+        gap: 12px;
       }
 
       .social-links a {
         color: #fff;
-        font-size: 1rem;
-      }
-
-      .whatsapp-link {
-        color: #fff;
-        font-weight: 700;
       }
 
       @media (max-width: 768px) {
@@ -250,14 +231,13 @@
           flex-direction: column;
         }
 
-        .footer-grid {
+        .footer-inner {
           grid-template-columns: 1fr;
           text-align: center;
         }
 
-        .footer-col,
-        .footer-col.center,
-        .footer-col.right {
+        .footer-center,
+        .footer-right {
           text-align: center;
         }
       }
@@ -266,28 +246,14 @@
   <body>
     <header class='site-header'>
       <div class='container header-inner'>
-        <b:section class='header-widget' id='header' maxwidgets='1' showaddelement='yes'>
-          <b:widget id='Header1' locked='false' title='Header' type='Header' version='2' visible='true'>
-            <b:includable id='main'>
-              <div class='widget-content'>
-                <a class='header-logo-link' expr:href='data:blog.homepageUrl'>
-                  <b:if cond='data:useImage'>
-                    <img expr:alt='data:title' expr:height='data:height' expr:src='data:sourceUrl' expr:width='data:width'/>
-                    <b:else/>
-                    <h2 class='header-title'><data:title/></h2>
-                  </b:if>
-                </a>
-              </div>
-            </b:includable>
-          </b:widget>
-        </b:section>
+        <b:section id='header'><b:widget id='Header1' locked='false' type='Header' version='2'/></b:section>
       </div>
     </header>
 
     <section class='hero'>
       <div class='container'>
-        <h1>Certificate Verification Portal / بوابة التحقق من الشهادات</h1>
-        <p>Enter your Student ID to verify and view your electronic certificate / أدخل رقم الطالب للتحقق وعرض نسختك الإلكترونية</p>
+        <h1>Certificate Verification / التحقق من الشهادات</h1>
+        <p>Enter your student ID code to verify and view the official certificate / أدخل كود رقم الطالب للتحقق وعرض الشهادة الرسمية</p>
       </div>
     </section>
 
@@ -295,7 +261,7 @@
       <div class='container'>
         <div class='search-card'>
           <form action='/search' class='search-form' method='get'>
-            <input name='q' placeholder='Enter Student ID / أدخل رقم الطالب' required='required' type='text'/>
+            <input name='q' placeholder='Enter Student ID / أدخل رقم الطالب' type='text'/>
             <button type='submit'><i class='fa-solid fa-magnifying-glass'></i> Verify</button>
           </form>
         </div>
@@ -304,46 +270,48 @@
 
     <main class='content-section'>
       <div class='container'>
-        <b:section id='main' maxwidgets='1' showaddelement='no'>
-          <b:widget id='Blog1' locked='true' title='Posts' type='Blog' version='2' visible='true'>
-            <b:includable id='main' var='this'>
-              <b:if cond='data:view.isSearch'>
-                <b:if cond='data:posts.empty'>
-                  <div class='result-card'>
-                    <p class='not-found'>No record found for this Student ID / لا يوجد سجل لهذا الرقم</p>
-                  </div>
-                  <b:else/>
-                  <b:loop values='data:posts' var='post'>
-                    <article class='result-card'>
-                      <h2 class='result-title'><data:post.title/></h2>
-                      <div class='result-body'>
-                        <data:post.body/>
-                      </div>
-                    </article>
-                  </b:loop>
-                </b:if>
+        <b:section id='main'><b:widget id='Blog1' locked='true' type='Blog' version='2'>
+          <b:includable id='main'>
+            <b:if cond='data:view.isSearch or data:view.isPost'>
+              <b:if cond='data:view.isSearch and data:posts.empty'>
+                <div class='empty-state'>
+                  <p class='not-found'>Not Found: No certificate found for this ID / غير موجود: لا توجد شهادة لهذا الرقم</p>
+                </div>
                 <b:else/>
-                <p class='empty-text'>Enter an ID above to begin / أدخل رقمًا أعلاه للبدء</p>
+                <b:loop values='data:posts' var='post'>
+                  <b:include data='post' name='post'/>
+                </b:loop>
               </b:if>
-            </b:includable>
-          </b:widget>
-        </b:section>
+              <b:else/>
+              <div class='empty-state'>
+                <p class='hint'>Use the search box above to verify a certificate by ID / استخدم مربع البحث أعلاه للتحقق من الشهادة بالرقم</p>
+              </div>
+            </b:if>
+          </b:includable>
+
+          <b:includable id='post' var='post'>
+            <article class='result-card'>
+              <h2 class='result-title'><data:post.title/></h2>
+              <div class='result-body'>
+                <data:post.body/>
+              </div>
+            </article>
+          </b:includable>
+        </b:widget></b:section>
       </div>
     </main>
 
     <footer class='site-footer'>
-      <div class='container footer-grid'>
-        <div class='footer-col'>© <data:blog.title/>. All Rights Reserved.</div>
-        <div class='footer-col center'>
+      <div class='container footer-inner'>
+        <div>© <data:blog.title/>. All Rights Reserved.</div>
+        <div class='footer-center'>
           <div class='social-links'>
             <a aria-label='Facebook' href='https://facebook.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-facebook-f'></i></a>
             <a aria-label='LinkedIn' href='https://linkedin.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-linkedin-in'></i></a>
             <a aria-label='YouTube' href='https://youtube.com' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'></i></a>
           </div>
         </div>
-        <div class='footer-col right'>
-          <a class='whatsapp-link' href='https://wa.me/6289509909354' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'></i> Contact via WhatsApp</a>
-        </div>
+        <div class='footer-right'>Contact: info@acbpt.com</div>
       </div>
     </footer>
   </body>
