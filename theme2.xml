@@ -595,7 +595,7 @@
         </div>
         <nav aria-label='Primary' class='primary-nav'>
           <a href='/'>Home</a>
-          <a data-i18n='verifyLink' href='#verify-section'>Verify Certificate</a>
+          <a data-i18n='verifyLink' href='#verify-section'>Verify Credential</a>
           <a class='contact-btn' data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
         </nav>
         <button class='lang-toggle' id='lang-toggle' onclick='toggleLang()' title='Switch Language'>AR</button>
@@ -603,7 +603,7 @@
       </div>
       <div class='mobile-menu' id='mobile-menu'>
         <div class='container'>
-          <a data-i18n='verifyLink' href='#verify-section'>Verify Certificate</a>
+          <a data-i18n='verifyLink' href='#verify-section'>Verify Credential</a>
           <a data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
         </div>
       </div>
@@ -1102,14 +1102,14 @@
           <h3 class='footer-title'>Quick Links</h3>
           <nav aria-label='Footer Links' class='footer-links'>
             <a href='/'>Home</a>
-            <a data-i18n='verifyLink' href='#verify-section'>Verify Certificate</a>
+            <a data-i18n='verifyLink' href='#verify-section'>Verify Credential</a>
             <a data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
           </nav>
         </div>
         <div>
           <h3 class='footer-title'>Contact</h3>
           <div class='footer-contact'>
-            <a href='mailto:contact@germanboard.de'>info@acbpt.com</a>
+            <a href='mailto:contact@germanboard.de'>contact@germanboard.de</a>
             <a href='tel:+493098765432'>Support: +49 30 98765432</a>
           </div>
         </div>
