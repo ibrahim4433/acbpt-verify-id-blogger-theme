@@ -84,7 +84,7 @@
       .site-header {
         background: var(--nav-dark);
         color: #ffffff;
-        border-bottom: 3px solid #840d27;
+        border-bottom: 2px solid #cfdae724;
         position: relative;
       }
 
@@ -149,14 +149,14 @@
       }
 
       .primary-nav .contact-btn {
-        background: var(--primary);
+        background: #88152e;
         text-transform: none;
         border-radius: 8px;
         padding: 10px 16px;
       }
 
       .primary-nav .contact-btn:hover {
-        background: var(--primary-hover);
+        background: #6f1025;
       }
 
       .lang-toggle {
@@ -253,7 +253,7 @@
 
       .hero {
         position: relative;
-        background: linear-gradient(135deg, #0b1622 0%, #1a2a3a 100%);
+        background: linear-gradient(360deg, #0a1e33 0%, #1f2545f5 50%, #840d27 100%);
         color: #ffffff;
         padding: 80px 0 96px;
         overflow: hidden;
@@ -534,7 +534,6 @@
           <a aria-label='YouTube' href='https://youtube.com/@germanboardofficial' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'/></a>
           <a aria-label='WhatsApp' href='https://wa.me/493098765432' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'/></a>
           <a aria-label='Facebook' href='https://www.facebook.com/germanboardofficial'><i class='fa-brands fa-facebook-f'/></a>
-          <a aria-label='Telegram' href='https://t.me/german_board_official'><i class='fa-brands fa-telegram'/></a>
           <a aria-label='Email' href='mailto:contact@germanboard.de'><i class='fa-solid fa-envelope'/></a>
         </div>
       </div>
@@ -1095,7 +1094,6 @@
             <a aria-label='YouTube' href='https://youtube.com/@germanboardofficial' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'/></a>
             <a aria-label='WhatsApp' href='https://wa.me/493098765432' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'/></a>
             <a aria-label='Facebook' href='https://www.facebook.com/germanboardofficial'><i class='fa-brands fa-facebook-f'/></a>
-            <a aria-label='Telegram' href='https://t.me/german_board_official'><i class='fa-brands fa-telegram'/></a>
             <a aria-label='Email' href='mailto:contact@germanboard.de'><i class='fa-solid fa-envelope'/></a>
           </div>
         </div>
