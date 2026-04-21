@@ -527,14 +527,13 @@
     <div class='top-strip'>
       <div class='container top-strip-inner'>
         <div class='top-contact'>
-          <a aria-label='Email us at contact@germanboard.de' href='mailto:contact@germanboard.de'><i class='fa-solid fa-envelope'/> contact@germanboard.de</a>
-          <a aria-label='Call us at +49 30 98765432' href='tel:+493098765432'><i class='fa-solid fa-phone'/> +49 30 98765432</a>
+          <a aria-label='Email us at contact@germanboard.de' href='mailto:contact@germanboard.org'><i class='fa-solid fa-envelope'/> contact@boardgerman.org</a>
+          <a aria-label='Call us at +970 569 448 000' href='tel:+970569448000'><i class='fa-solid fa-phone'/> +970 569448000</a>
         </div>
         <div class='top-social'>
-          <a aria-label='YouTube' href='https://youtube.com/@germanboardofficial' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-youtube'/></a>
-          <a aria-label='WhatsApp' href='https://wa.me/493098765432' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'/></a>
-          <a aria-label='Facebook' href='https://www.facebook.com/germanboardofficial'><i class='fa-brands fa-facebook-f'/></a>
-          <a aria-label='Email' href='mailto:contact@germanboard.de'><i class='fa-solid fa-envelope'/></a>
+          <a aria-label='WhatsApp' href='https://wa.me/970569448000' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'/></a>
+          <a aria-label='Facebook' href='https://www.facebook.com/share/18QrbtMwq8/'><i class='fa-brands fa-facebook-f'/></a>
+          <a aria-label='Email' href='mailto:contact@germanboard.org'><i class='fa-solid fa-envelope'/></a>
         </div>
       </div>
     </div>
@@ -543,15 +542,15 @@
       <div class='container nav-bar'>
         <div class='logo-wrap'>
           <b:section id='header'>
-            <b:widget id='Header1' locked='false' title='German Board (Header)' type='Header' visible='true'>
+            <b:widget id='Header1' locked='false' title='boardgerman (Header)' type='Header' visible='true'>
               <b:widget-settings>
-                <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEj1uZbKxWEl8iy73RMh10x0762OvH6G4xeHFqvqLUWiRcSpdmHlyc7Z67pOnBrtJXwbbuyWbdHKlv2q8qfi2Dd0Psz4Z1u-SmyYViYpNGAmcTJfXQ2Ip3fH9JsI5gZfVMeT-fZeTbaCUhLxkLqhQz81HIpRJgsDHXwE-BjE0w4VUPKyinqL4KAtRQUXKICr=s480</b:widget-setting>
-                <b:widget-setting name='displayHeight'>150</b:widget-setting>
-                <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+                <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEi12ZklIjht-Y7CfFJythcRgTw8QbJjEzpc4ynpS6mS8F2nfr2FTBoqZxojsON3RJEEnVEl6dst10AmtpyaVL9SXS1fZ_kteeMVak5Ag4E_Ozx-34UdUtNz2_BpcONRijl8crj-mFs5UPbhl6V78sMJEAOIUhKy4u2HfUFEBhtzRscGtYWGRNjjqJZpqsxs=s362</b:widget-setting>
+                <b:widget-setting name='displayHeight'>113</b:widget-setting>
+                <b:widget-setting name='sectionWidth'>362</b:widget-setting>
                 <b:widget-setting name='useImage'>true</b:widget-setting>
-                <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
                 <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-                <b:widget-setting name='displayWidth'>480</b:widget-setting>
+                <b:widget-setting name='displayWidth'>362</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main' var='this'>
     <div class='header-widget'>
@@ -611,7 +610,7 @@
 
     <section class='hero' id='verify-section'>
       <div class='container hero-inner'>
-        <h1>German Board Certificate Verification</h1>
+        <h1>Student Certificate Verification</h1>
         <p>Enter your certificate ID to instantly verify and view official German Board credential details.</p>
         <div class='search-wrap'>
           <div class='search-card'>
@@ -687,6 +686,34 @@
   <a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
     <b:message name='messages.postAComment'/>
   </a>
+</b:includable>
+            <b:includable id='blogThisShare'>
+  <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+            <b:includable id='bylineByName' var='byline'>
+  <b:switch var='data:byline.name'>
+  <b:case value='share'/>
+    <b:include cond='data:post.shareUrl' name='postShareButtons'/>
+  <b:case value='comments'/>
+    <b:include cond='data:post.allowComments' name='postCommentsLink'/>
+  <b:case value='location'/>
+    <b:include cond='data:post.location' name='postLocation'/>
+  <b:case value='timestamp'/>
+    <b:include cond='not data:view.isPage' name='postTimestamp'/>
+  <b:case value='author'/>
+    <b:include name='postAuthor'/>
+  <b:case value='labels'/>
+    <b:include cond='data:post.labels' name='postLabels'/>
+  <b:case value='icons'/>
+    <b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
+  </b:switch>
+</b:includable>
+            <b:includable id='bylineRegion' var='regionItems'>
+  <b:loop values='data:regionItems' var='byline'>
+    <b:include data='byline' name='bylineByName'/>
+  </b:loop>
 </b:includable>
             <b:includable id='commentAuthorAvatar'>
   <div class='avatar-image-container'>
@@ -828,8 +855,45 @@
     </b:if>
   </section>
 </b:includable>
+            <b:includable id='commentsLink'>
+  <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+    <b:if cond='data:post.numberOfComments &gt; 0'>
+      <b:message name='messages.numberOfComments'>
+        <b:param expr:value='data:post.numberOfComments' name='numComments'/>
+      </b:message>
+    <b:else/>
+      <data:messages.postAComment/>
+    </b:if>
+  </a>
+</b:includable>
+            <b:includable id='commentsLinkIframe'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
             <b:includable id='commentsTitle'>
   <h3 class='title'><data:messages.comments/></h3>
+</b:includable>
+            <b:includable id='defaultAdUnit'>
+  <ins class='adsbygoogle' data-ad-format='auto' expr:data-ad-client='data:adClientId ?: data:blog.adsenseClientId' expr:data-ad-host='data:blog.adsenseHostId' expr:style='data:style ?: &quot;display: block;&quot;'>
+    <b:attr cond='not data:blog.analytics4' expr:value='data:blog.analyticsAccountNumber' name='data-analytics-uacct'/>
+  </ins>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</b:includable>
+            <b:includable id='emailPostIcon'>
+  <span class='byline post-icons'>
+    <!-- email post links -->
+    <span class='item-action'>
+      <a expr:href='data:post.emailPostUrl' expr:title='data:messages.emailPost'>
+        <b:include data='{ iconClass: &quot;touch-icon sharing-icon&quot; }' name='emailIcon'/>
+      </a>
+    </span>
+  </span>
+</b:includable>
+            <b:includable id='facebookShare'>
+  <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
 </b:includable>
             <b:includable id='feedLinks'>
   <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
@@ -855,6 +919,32 @@
      <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
   </b:loop>
   </div>
+</b:includable>
+            <b:includable id='footerBylines'>
+  <b:if cond='data:widgets.Blog.first.footerBylines'>
+    <b:loop index='i' values='data:widgets.Blog.first.footerBylines' var='region'>
+      <b:if cond='not data:region.items.empty'>
+        <div expr:class='&quot;post-footer-line post-footer-line-&quot; + (data:i + 1)'>
+          <b:with value='&quot;footer-&quot; + (data:i + 1)' var='regionName'>
+            <b:include data='region.items' name='bylineRegion'/>
+          </b:with>
+        </div>
+      </b:if>
+    </b:loop>
+  </b:if>
+</b:includable>
+            <b:includable id='googlePlusShare'>
+</b:includable>
+            <b:includable id='headerByline'>
+  <b:if cond='data:widgets.Blog.first.headerByline'>
+    <div class='post-header'>
+      <div class='post-header-line-1'>
+        <b:with value='&quot;header-1&quot;' var='regionName'>
+          <b:include data='data:widgets.Blog.first.headerByline.items' name='bylineRegion'/>
+        </b:with>
+      </div>
+    </div>
+  </b:if>
 </b:includable>
             <b:includable id='homePageLink'>
   <a class='home-link' expr:href='data:blog.homepageUrl'>
@@ -884,9 +974,29 @@
     </div>
   </b:if>
 </b:includable>
+            <b:includable id='linkShare'>
+  <b:with value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
             <b:includable id='nextPageLink'>
   <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
     <data:messages.olderPosts/>
+  </a>
+</b:includable>
+            <b:includable id='otherSharingButton'>
+  <span class='sharing-platform-button sharing-element-other' expr:aria-label='data:messages.shareToOtherApps.escaped' expr:data-url='data:originalUrl' expr:title='data:messages.shareToOtherApps.escaped' role='menuitem' tabindex='-1'>
+    <b:with value='{key: &quot;sharingOther&quot;}' var='platform'>
+      <b:include name='sharingPlatformIcon'/>
+    </b:with>
+    <span class='platform-sharing-text'><data:messages.shareOtherApps.escaped/></span>
+  </span>
+</b:includable>
+            <b:includable id='platformShare'>
+  <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key' expr:data-url='data:originalUrl' expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:onclick='data:onclick ? data:onclick : &quot;&quot;' expr:title='data:platform.shareMessage' target='_blank'>
+    <span class='share-button-link-text'>
+      <data:platform.shareMessage/>
+    </span>
   </a>
 </b:includable>
             <b:includable id='post' var='post'>
@@ -900,6 +1010,23 @@
               </div>
             </article>
           </b:includable>
+            <b:includable id='postAuthor'>
+  <span class='byline post-author vcard'>
+    <span class='post-author-label'>
+      <data:byline.label/>
+    </span>
+    <span class='fn'>
+      <b:if cond='data:post.author.profileUrl'>
+        <meta expr:content='data:post.author.profileUrl'/>
+        <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+          <span><data:post.author.name/></span>
+        </a>
+      <b:else/>
+        <span><data:post.author.name/></span>
+      </b:if>
+    </span>
+  </span>
+</b:includable>
             <b:includable id='postBody' var='post'>
   <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
   <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
@@ -956,8 +1083,57 @@
             <b:includable id='postHeader' var='post'>
   <b:include name='headerByline'/>
 </b:includable>
+            <b:includable id='postJumpLink' var='post'>
+  <div class='jump-link flat-button'>
+    <a expr:href='data:post.url fragment &quot;more&quot;' expr:title='data:post.title'>
+      <b:eval expr='data:blog.jumpLinkMessage'/>
+    </a>
+  </div>
+</b:includable>
+            <b:includable id='postLabels'>
+  <span class='byline post-labels'>
+    <span class='byline-label'><data:byline.label/></span>
+    <b:loop index='i' values='data:post.labels' var='label'>
+      <a expr:href='data:label.url' rel='tag'>
+        <data:label.name/>
+      </a>
+    </b:loop>
+  </span>
+</b:includable>
+            <b:includable id='postLocation'>
+  <span class='byline post-location'>
+    <data:byline.label/>
+    <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
+  </span>
+</b:includable>
             <b:includable id='postMeta' var='post'>
   <b:include data='post' name='postMetadataJSON'/>
+</b:includable>
+            <b:includable id='postMetadataJSONImage'>
+  &quot;image&quot;: {
+    &quot;@type&quot;: &quot;ImageObject&quot;,
+    <b:if cond='data:post.featuredImage.isResizable'>
+    &quot;url&quot;: &quot;<b:eval expr='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'/>&quot;,
+    &quot;height&quot;: 630,
+    &quot;width&quot;: 1200
+    <b:else/>
+    &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/w1200/&quot;,
+    &quot;height&quot;: 348,
+    &quot;width&quot;: 1200
+    </b:if>
+  },
+</b:includable>
+            <b:includable id='postMetadataJSONPublisher'>
+ &quot;publisher&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Blogger&quot;,
+    &quot;logo&quot;: {
+      &quot;@type&quot;: &quot;ImageObject&quot;,
+      &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/&quot;,
+      &quot;width&quot;: 206,
+      &quot;height&quot;: 60
+    }
+  },
 </b:includable>
             <b:includable id='postPagination'>
   <div class='blog-pager container' id='blog-pager'>
@@ -965,6 +1141,30 @@
     <b:include cond='data:olderPageUrl' name='nextPageLink'/>
     <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
   </div>
+</b:includable>
+            <b:includable id='postReactions'>
+  <!-- Reaction feature no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+            <b:includable id='postShareButtons'>
+  <div class='byline post-share-buttons goog-inline-block'>
+    <b:with value='data:sharingId ?: ((data:widget.instanceId ?: &quot;sharing&quot;) + &quot;-&quot; + (data:regionName ?: &quot;byline&quot;) + &quot;-&quot; + data:post.id)' var='sharingId'>
+      <!-- Note: 'sharingButtons' includable is from the default Sharing widget markup. -->
+      <b:include data='{                                                sharingId: data:sharingId,                                                originalUrl: data:post.url,                                                platforms: data:this.sharing.platforms,                                                shareUrl: data:post.shareUrl,                                                shareTitle: data:post.title,                                              }' name='sharingButtons'/>
+    </b:with>
+  </div>
+</b:includable>
+            <b:includable id='postTimestamp'>
+  <span class='byline post-timestamp'>
+    <data:byline.label/>
+    <b:if cond='data:post.url'>
+      <meta expr:content='data:post.url.canonical'/>
+      <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+        <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
+          <data:post.date/>
+        </time>
+      </a>
+    </b:if>
+  </span>
 </b:includable>
             <b:includable id='postTitle' var='post'>
   <a expr:name='data:post.id'/>
@@ -982,6 +1182,42 @@
   <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
     <data:messages.newerPosts/>
   </a>
+</b:includable>
+            <b:includable id='sharingButton'>
+  <span expr:aria-label='data:platform.shareMessage' expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key' expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage' role='menuitem' tabindex='-1'>
+    <b:include name='sharingPlatformIcon'/>
+    <span class='platform-sharing-text'><data:platform.name/></span>
+  </span>
+</b:includable>
+            <b:includable id='sharingButtonContent'>
+  <div class='flat-icon-button ripple'>
+    <b:include name='shareIcon'/>
+  </div>
+</b:includable>
+            <b:includable id='sharingButtons'>
+  <div class='sharing' expr:aria-owns='&quot;sharing-popup-&quot; + data:sharingId' expr:data-title='data:shareTitle'>
+    <button class='sharing-button touch-icon-button' expr:aria-controls='&quot;sharing-popup-&quot; + data:sharingId' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-button-&quot; + data:sharingId' role='button'>
+      <b:include name='sharingButtonContent'/>
+    </button>
+    <b:include name='sharingButtonsMenu'/>
+  </div>
+</b:includable>
+            <b:includable id='sharingButtonsMenu'>
+  <div class='share-buttons-container'>
+    <ul aria-hidden='true' class='share-buttons hidden' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-popup-&quot; + data:sharingId' role='menu'>
+      <b:loop values='(data:platforms ?: data:blog.sharing.platforms) filter (p =&gt; p.key not in {&quot;blogThis&quot;})' var='platform'>
+        <li>
+          <b:include name='sharingButton'/>
+        </li>
+      </b:loop>
+      <li aria-hidden='true' class='hidden'>
+        <b:include name='otherSharingButton'/>
+      </li>
+    </ul>
+  </div>
+</b:includable>
+            <b:includable id='sharingPlatformIcon'>
+  <b:include data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }' expr:name='data:platform.key + &quot;Icon&quot;'/>
 </b:includable>
             <b:includable id='threadedCommentForm' var='post'>
   <div class='comment-form'>
@@ -1108,8 +1344,8 @@
         <div>
           <h3 class='footer-title'>Contact</h3>
           <div class='footer-contact'>
-            <a href='mailto:contact@germanboard.de'>contact@germanboard.de</a>
-            <a href='tel:+493098765432'>Support: +49 30 98765432</a>
+            <a href='mailto:contact@germanboard.org'>contact@boardgerman.org</a>
+            <a href='tel:+970569448000'>Support: +970 569 448 000</a>
           </div>
         </div>
       </div>
