@@ -97,7 +97,7 @@
       }
 
       .logo-wrap {
-        display: none;
+        min-width: 0;
       }
 
       #header {
