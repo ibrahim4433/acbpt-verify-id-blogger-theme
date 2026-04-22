@@ -222,6 +222,7 @@
       .mobile-menu .container {
         display: flex;
         flex-direction: column;
+        align-items: end;
       }
 
       .mobile-menu a {
@@ -230,6 +231,7 @@
         font-size: 0.95rem;
         font-weight: 700;
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        text-align: end;
       }
 
       .mobile-menu a:hover {
