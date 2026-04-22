@@ -253,7 +253,11 @@
 
       .hero {
         position: relative;
-        background: linear-gradient(360deg, #0a1e33 0%, #1f2545f5 50%, #840d27 100%);
+        background-image: url('reference-website/images/bg-circle-dark.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
         color: #ffffff;
         padding: 80px 0 96px;
         overflow: hidden;
@@ -263,8 +267,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0, transparent 42%),
-          radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0, transparent 36%);
+        background: none;
         pointer-events: none;
       }
 
