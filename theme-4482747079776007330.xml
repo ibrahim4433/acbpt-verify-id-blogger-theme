@@ -92,12 +92,12 @@
         min-height: 84px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 24px;
       }
 
       .logo-wrap {
-        min-width: 180px;
+        display: none;
       }
 
       #header {
@@ -130,6 +130,13 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-end;
+        margin-inline-start: auto;
+        gap: 10px;
+      }
+
+      .header-controls {
+        display: flex;
+        align-items: center;
         gap: 10px;
       }
 
@@ -493,28 +500,12 @@
         }
 
         .lang-toggle {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
           font-size: 0.8rem;
           padding: 5px 10px;
-          z-index: 210;
-        }
-
-        html[dir='ltr'] .lang-toggle {
-          right: 56px;
-          left: auto;
-        }
-
-        html[dir='rtl'] .lang-toggle {
-          left: 56px;
-          right: auto;
         }
 
         .hamburger {
           display: flex;
-          position: relative;
-          z-index: 220;
         }
 
         .search-form {
@@ -601,8 +592,10 @@
           <a data-i18n='verifyLink' href='#verify-section'>Verify Credential</a>
           <a class='contact-btn' data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
         </nav>
-        <button class='lang-toggle' id='lang-toggle' onclick='toggleLang()' title='Switch Language'>AR</button>
-        <button aria-label='Toggle menu' class='hamburger' id='hamburger-btn' onclick='toggleMenu()'><i class='fa-solid fa-bars'/></button>
+        <div class='header-controls'>
+          <button class='lang-toggle' id='lang-toggle' onclick='toggleLang()' title='Switch Language'>AR</button>
+          <button aria-label='Toggle menu' class='hamburger' id='hamburger-btn' onclick='toggleMenu()'><i class='fa-solid fa-bars'/></button>
+        </div>
       </div>
       <div class='mobile-menu' id='mobile-menu'>
         <div class='container'>
