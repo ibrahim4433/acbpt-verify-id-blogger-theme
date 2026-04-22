@@ -267,7 +267,8 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: none;
+        background-color: rgba(0, 0, 50, 0.5);
+        z-index: 0;
         pointer-events: none;
       }
 
