@@ -284,7 +284,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background-color: rgba(0, 0, 50, 0.5);
+        background-color: rgba(42,50,60, 0.85);
         z-index: 0;
         pointer-events: none;
       }
@@ -424,8 +424,8 @@
       }
 
       .site-footer {
-        background: #0a1e33;
-        color: #ced8e6;
+        background: #d0e3fe;
+        color: #5d6471;
         padding: 42px 0;
       }
 
@@ -441,14 +441,14 @@
       }
 
       .footer-meta {
-        color: #aebace;
+        color: #e62e2e;
         font-size: 0.94rem;
       }
 
       .footer-title {
         margin: 0 0 10px;
         font-size: 1.02rem;
-        color: #ffffff;
+        color: #e62e2e;
       }
 
       .footer-links,
@@ -529,19 +529,7 @@
     ]]></b:skin>
   </head>
   <body>
-    <div class='top-strip'>
-      <div class='container top-strip-inner'>
-        <div class='top-contact'>
-          <a aria-label='Email us at contact@germanboard.de' href='mailto:contact@germanboard.org'><i class='fa-solid fa-envelope'/> contact@boardgerman.org</a>
-          <a aria-label='Call us at +970 569 448 000' href='tel:+970569448000'><i class='fa-solid fa-phone'/> +970 569448000</a>
-        </div>
-        <div class='top-social'>
-          <a aria-label='WhatsApp' href='https://wa.me/970569448000' rel='noopener noreferrer' target='_blank'><i class='fa-brands fa-whatsapp'/></a>
-          <a aria-label='Facebook' href='https://www.facebook.com/share/18QrbtMwq8/'><i class='fa-brands fa-facebook-f'/></a>
-          <a aria-label='Email' href='mailto:contact@germanboard.org'><i class='fa-solid fa-envelope'/></a>
-        </div>
-      </div>
-    </div>
+
 
     <header class='site-header'>
       <div class='container nav-bar'>
@@ -598,7 +586,7 @@
           </b:section>
         </div>
         <nav aria-label='Primary' class='primary-nav'>
-          <a href='/'>Home</a>
+        
           <a data-i18n='verifyLink' href='#verify-section'>Verify Credential</a>
           <a class='contact-btn' data-i18n='contactBtn' href='#contact-section'>Contact Us</a>
         </nav>
