@@ -222,6 +222,7 @@
       .mobile-menu .container {
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
       }
 
       .mobile-menu a {
@@ -230,10 +231,19 @@
         font-size: 0.95rem;
         font-weight: 700;
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        text-align: right;
       }
 
       .mobile-menu a:hover {
         background: rgba(255, 255, 255, 0.08);
+      }
+
+      html[dir='rtl'] .mobile-menu .container {
+        align-items: flex-start;
+      }
+
+      html[dir='rtl'] .mobile-menu a {
+        text-align: left;
       }
 
       .download-btn {
